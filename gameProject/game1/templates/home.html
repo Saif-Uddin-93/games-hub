@@ -1,0 +1,28 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block title %} Home Page {% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+{% block content %}
+<main>
+    <div id="title">
+        <h1>Games Hub</h1>
+    </div>
+    <div id="app-drawer">
+        {% for game in games %}
+        <div class="app {{ game.title }}-class">
+            <h3> {{ game.title }} </h3>
+            {% if game.title == "Links" %}
+            <ul>
+                <li>
+                    <a href="http://localhost:8000/">Test web-link</a>
+                </li>
+            </ul>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</main>
+<footer></footer>
+{% endblock %}
