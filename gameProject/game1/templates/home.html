@@ -1,19 +1,22 @@
 {% extends "base.html" %} 
 {% load static %}
+{% load filters %}
 {% block title %} Home Page {% endblock %}
-{% block content %}
-<main>
-    <div id="title" class="mt-[5px] px-8 py-4 text-[1rem]">
-        <h1>Games Hub</h1>
-    </div>
+{% block header %} 
+<header id="title" class="mt-[5px] px-[2rem] py-[1.5rem] text-[1rem]">
+    <h1>Games Hub</h1>
+</header>
+{% endblock %}
+{% block main %}
+<main class= px-[2rem]>
     <div id="app-drawer">
         {% for game in games %}
-        <div class="app {{ game.title }}-class">
-            <h3> {{ game.title }} </h3>
+        <div id="{{ game.title }}-div" class="app">
+            <h3> {{ game.title|rm_whitespace }} </h3>
             <p>
                 {{ game.description }}
             </p>
-            <a href="{{ game.link }}" class="underline text-[blue]" >web-link</a>
+            <a href="{{ game.link }}" class="underline text-[blue]">web-link</a>
         </div>
         {% endfor %}
     </div>
