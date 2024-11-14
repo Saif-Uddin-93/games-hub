@@ -10,13 +10,13 @@
 {% block main %}
 <main class= px-[2rem]>
     <div id="app-drawer" class="flex gap-[1rem]">
-        {% for game in games %}
-        <div id="{{ game.title|rm_whitespace }}-div" class="app border-solid border-2 border-[customGrey] my-[1rem] p-[0.5rem]">
-            <h3> {{ game.title }} </h3>
+        {% for test in testItems %}
+        <div id="{{ test }}-div" class="app border-solid border-2 border-[#b0babf] my-[1rem] p-[0.5rem]">
+            <h3> {{ test }} </h3>
             <p>
-                {{ game.description }}
+                {{ test }}
             </p>
-            <a href="{{ game.link }}" class="underline text-[blue]">web-link</a>
+            <a href="{{ test }}" class="underline text-[blue]">web-link</a>
         </div>
         {% endfor %}
     </div>

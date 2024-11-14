@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import GameLink
+from .models import *
 
 # Create your views here.
 def home(request):
@@ -9,4 +9,13 @@ def home(request):
     })
 
 def test(request):
-    pass
+    items = ["A", "B", "C"]
+    return render(request, "test.html", {
+        "testItems":items
+    })
+
+def react(request):
+    items = []
+    return render(request, 'game1/index.html', {
+        "react_items" : items
+    })

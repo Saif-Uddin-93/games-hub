@@ -1,7 +1,8 @@
 from django.urls import path
-from . import views
+from .views import *
 
 urlpatterns = [
-    path('', views.home, name="home"),
-    path("test/", views.test, name="test")
+    path('', home, name="home"),
+    path("test/", test, name="test"),
+    path("react/", react, name="react")
 ]
