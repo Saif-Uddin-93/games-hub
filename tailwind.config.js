@@ -4,7 +4,18 @@ module.exports = {
             // "./**/*.{html,js}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        //
+      },
+      colors: {
+        "customGrey": "#b0babf",
+        //
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss"),
+    require("autoprefixer"),
+  ],
 }
