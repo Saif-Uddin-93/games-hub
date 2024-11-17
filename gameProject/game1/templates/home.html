@@ -4,19 +4,21 @@
 {% block title %} Home Page {% endblock %}
 {% block header %} 
 <header id="title" class="mt-[5px] px-[2rem] py-[1.5rem] text-[1rem]">
-    <h1>Games Hub</h1>
+    <h1 class="text-[3rem]">Games Hub</h1>
 </header>
 {% endblock %}
 {% block main %}
 <main class= px-[2rem]>
-    <div id="app-drawer" class="flex gap-[1rem]">
+    <div id="app-drawer" class="flex gap-[2rem]">
         {% for game in games %}
-        <div id="{{ game.title|rm_whitespace }}-div" class="app border-solid border-2 border-[customGrey] my-[1rem] p-[0.5rem]">
-            <h3> {{ game.title }} </h3>
-            <p>
-                {{ game.description }}
-            </p>
-            <a href="{{ game.link }}" class="underline text-[blue]">web-link</a>
+        <div class="[filter:drop-shadow(0_0_0.75rem_rgb(5,_5,_5))]">
+            <div id="{{ game.title|rm_whitespace }}-div" class="app bg-customGrey border-solid border-2 border-[transparent] rounded-xl my-[1rem] p-[1.5rem] [min-width:200px]">
+                <h3 class="text-[1.5rem]"><strong>{{ game.title }} </strong></h3>
+                <p>
+                    {{ game.description }}
+                </p>
+                <a href="{{ game.link }}" class="underline text-[blue]">web-link</a>
+            </div>
         </div>
         {% endfor %}
     </div>

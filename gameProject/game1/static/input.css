@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* add custom CSS below */
+
+*{
+    color: white;
+}
