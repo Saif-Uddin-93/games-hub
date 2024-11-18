@@ -10,8 +10,24 @@
     {% endblock %}
 </head>
 <body class="bg-[#343633]">
-    {% block header %}{% endblock %}
-    {% block main %}{% endblock %}
-    {% block scripts %}{% endblock %}
+    <header id="title" class="mt-[5px] px-[2rem] py-[1.5rem] text-[1rem]">
+        <nav class="mb-[3rem]">
+            <ul class="flex justify-evenly">
+                <li><a href="" class="underline">Home</a></li>
+                <li><a href="" class="underline">About</a></li>
+                <li><a href="" class="underline">Games</a></li>
+                <li><a href="" class="underline">Search</a></li>
+                <li><a href="" class="underline">Contact</a></li>
+            </ul>
+        </nav>
+    {% block header %}
+    {% endblock %}
+    </header>
+    <main class= "px-[2rem] flex justify-center">
+    {% block main %}
+    {% endblock %}
+    </main>
+    {% block scripts %}
+    {% endblock %}
 </body>
 </html>
