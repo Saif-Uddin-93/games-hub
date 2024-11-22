@@ -15,23 +15,38 @@
             <ul class="flex justify-evenly">
                 <li><a href="" class="underline">Home</a></li>
                 <li><a href="" class="underline">About</a></li>
-                <li id="nav-games" class="group"><a href="" class=" relative underline pb-[0.3rem]">Games</a><span class="drop-btn pl-1 pb-[0.3rem] cursor-pointer absolute">▾</span>
-                    <ul id="nav-games-dropdown" class="absolute hidden group-hover:block p-2 top-7 rounded-md bg-customGrey">
-                        <li class="mt-1 mb-4"><a href="" class="font-bold hover:text-[blue] py-1">Waven</a></li>
-                        <hr class="border-[white] border-t-2 border-dashed">
-                        <li class="my-4"><a href="" class="font-bold hover:text-[blue] py-1">League of Legends</a></li>
-                        <hr class="border-[white] border-t-2 border-dashed">
-                        <li class="mt-4 mb-2"><a href="" class="font-bold hover:text-[blue] py-1">Heroes of the Storm</a></li>
+                <li id="nav-games" class="group">
+                    <a href="#" class="relative underline pb-[0.3rem]">Games</a>
+                    <span
+                      class="drop-btn absolute pl-1 pb-[0.3rem] -top-[0.1rem] cursor-pointer transform origin-[60%_50%] transition-transform duration-200 group-hover:rotate-180"
+                    >
+                      ▾
+                    </span>
+                    <ul
+                      id="nav-games-dropdown"
+                      class="absolute hidden group-hover:block p-2 top-7 rounded-md bg-customGrey"
+                    >
+                      <li class="mt-1 mb-4">
+                        <a href="#" class="font-bold hover:text-[blue] py-1">Waven</a>
+                      </li>
+                      <hr class="border-[white] border-t-2 border-dashed" />
+                      <li class="my-4">
+                        <a href="#" class="font-bold hover:text-[blue] py-1">League of Legends</a>
+                      </li>
+                      <hr class="border-[white] border-t-2 border-dashed" />
+                      <li class="mt-4 mb-2">
+                        <a href="#" class="font-bold hover:text-[blue] py-1">Heroes of the Storm</a>
+                      </li>
                     </ul>
-                </li>
+                  </li>                                   
                 <li><a href="" class="underline">Search</a></li>
-                <li><a href="" class="pnderline">Contact</a></li>
+                <li><a href="" class="underline">Contact</a></li>
             </ul>
         </nav>
     {% block header %}
     {% endblock %}
     </header>
-    <main class= "px-[2rem] flex justify-center">
+    <main class= "px-8 flex justify-center">
     {% block main %}
     {% endblock %}
     </main>
