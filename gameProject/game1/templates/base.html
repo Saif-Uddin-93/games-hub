@@ -11,13 +11,21 @@
 </head>
 <body class="bg-[#343633]">
     <header id="title" class="mt-[5px] px-[2rem] py-[1.5rem] text-[1rem]">
-        <nav class="mb-[3rem]">
+        <nav class="mb-[3rem] relative [z-index:1] [filter:drop-shadow(0_0_0.5rem_rgb(5,_5,_5))]">
             <ul class="flex justify-evenly">
                 <li><a href="" class="underline">Home</a></li>
                 <li><a href="" class="underline">About</a></li>
-                <li><a href="" class="underline">Games</a></li>
+                <li id="nav-games"><a href="" class="underline">Games</a><span class="drop-btn pl-1 cursor-pointer absolute">▾</span>
+                    <ul id="nav-games-dropdown" class="absolute p-2 mt-1 rounded-md bg-customGrey">
+                        <li class="mt-1 mb-4"><a href="" class="font-bold">game 1</a></li>
+                        <hr class="border-[white] border-t-[3px] border-dotted">
+                        <li class="my-4"><a href="" class="font-bold">game 2</a></li>
+                        <hr class="border-[white] border-t-[3px] border-dotted">
+                        <li class="my-2"><a href="" class="font-bold">game 3</a></li>
+                    </ul>
+                </li>
                 <li><a href="" class="underline">Search</a></li>
-                <li><a href="" class="underline">Contact</a></li>
+                <li><a href="" class="pnderline">Contact</a></li>
             </ul>
         </nav>
     {% block header %}
