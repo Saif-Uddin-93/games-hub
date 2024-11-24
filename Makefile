@@ -95,6 +95,6 @@ pdocs:
 ## Git
 git:
 	$(call execute_in_env, git add .)
-	$(call execute_in_env, git commit -m ) "$(MSG)"
+	$(call execute_in_env, git commit -m) "$(MSG)"
 	$(call execute_in_env, git push)
 	$(call execute_in_env, clear)
