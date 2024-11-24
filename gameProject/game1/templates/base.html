@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="flex justify-center">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
   {% block css %}
   {% endblock %}
 </head>
-<body class="bg-[#343633]">
+<body class="bg-[#343633] 2xl:min-w-[2000px] xl:min-w-[1440px] lg:min-w-[1080px] md:min-w-[800px]">
   <header id="title" class="mt-1 px-4 py-6 text-[1rem]">
   {% block header %}
     <nav class="mb-12 relative z-10 drop-shadow-[0_0_0.5rem_rgb(5,_5,_5)]">
@@ -44,7 +44,7 @@
           <li><a href="{% url 'contact' %}" class="underline">Contact</a></li>
       </ul>
     </nav>
-    <h1 class="text-[3rem]">
+    <h1 class="text-[3rem] xl:ml-60 lg:ml-40 md:ml-20">
       {% block h1 %}
       {% endblock %}
     </h1>
