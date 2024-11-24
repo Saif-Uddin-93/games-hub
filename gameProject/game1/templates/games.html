@@ -4,8 +4,8 @@
 {% block title %} Home Page {% endblock %}
 {% block header %} 
     {{ block.super }}
-<h1 class="text-[3rem]">Games Hub</h1>
 {% endblock %}
+{% block h1 %}Games{% endblock %}
 {% block main %}
 <div id="app-drawer" class="flex gap-[2rem]">
     {% for game in games_items %}

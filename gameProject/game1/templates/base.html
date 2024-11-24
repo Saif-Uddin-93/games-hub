@@ -44,13 +44,17 @@
           <li><a href="{% url 'contact' %}" class="underline">Contact</a></li>
       </ul>
     </nav>
+    <h1 class="text-[3rem]">
+      {% block h1 %}
+      {% endblock %}
+    </h1>
   {% endblock %}
   </header>
   <main class= "px-8 flex justify-center">
-  {% block main %}
-  {% endblock %}
-  {% block scripts %}
-  {% endblock %}
+    {% block main %}
+    {% endblock %}
+    {% block scripts %}
+    {% endblock %}
   </main>
   <footer>
   {% block footer %}
