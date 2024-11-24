@@ -3,9 +3,9 @@ from .models import *
 
 # Create your views here.
 def home(request):
-    items = GameLink.objects.all()
+    items = []
     return render(request, "home.html", {
-        "games": items,
+        "home_items": items,
     })
 
 def test(request):
@@ -27,9 +27,9 @@ def about(request):
     })
 
 def games(request):
-    items = []
-    return render(request, 'games.html', {
-        "games_items" : items
+    items = GameLink.objects.all()
+    return render(request, "games.html", {
+        "games_items": items,
     })
 
 def contact(request):
