@@ -91,3 +91,10 @@ run-checks: security-test run-black check-coverage
 pdocs:
 	$(call execute_in_env, export PYTHONPATH=${PYTHONPATH})
 	$(call execute_in_env, pdocs -o docs gameProject/*/*.py)
+
+## Git
+git:
+	$(call execute_in_env, git add .)
+	$(call execute_in_env, git commit -m MSG?='pushed via make command')
+	$(call execute_in_env, git push)
+	$(call execute_in_env, clear)
