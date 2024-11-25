@@ -7,4 +7,11 @@
 {% endblock %}
 {% block h1 %}Home{% endblock %}
 {% block main %}
+    {{ block.super }}
+    <div class="border border-solid border-customGrey p-10">
+        hello world!
+    </div>
+    <article class="border border-solid border-customGrey p-10">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos commodi eius, fugit corrupti quia praesentium voluptas nisi suscipit nam fuga pariatur itaque, quis accusamus, alias provident exercitationem error vitae at!
+    </article>
 {% endblock %}
